@@ -1,13 +1,13 @@
 class Father {
     name:string
-    age:number
+    protected age:number
 
     constructor(_name:string, _age:number){
-        this.name = this.name;
+        this.name = _name;
         this.age = _age;
     }
 
-    showName = ():void => {
+    showName():void {
         console.log(this.name);
     }
 }
@@ -20,10 +20,10 @@ class Son extends Father {
         this.surname = _surname;
     }
 
-    showSonName = ():void => {
+    showSonName():void {
         console.log(this.name);
     }
 }
 
 const son = new Son('Juan', 32, 'Gómez');
-console.log(son.name, son.age, son.surname, son.showName(), son.showSonName());
+// console.log(son.name, son.age, son.surname, son.showName(), son.showSonName());
